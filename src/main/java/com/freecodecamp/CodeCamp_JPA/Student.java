@@ -1,5 +1,6 @@
 package com.freecodecamp.CodeCamp_JPA;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -19,10 +20,19 @@ public class Student {
     )
     private String email;
     private int age;
-    @Column(
-            updatable = false
+
+    @OneToOne(
+            mappedBy = "student",
+            cascade = CascadeType.ALL
     )
-    private String some_column;
+    private StudentProfile studentProfile;
+
+    @ManyToOne
+    @JoinColumn(
+            name = "school_id"
+    )
+    @JsonBackReference
+    private School school;
 
     public Student() {
     }
@@ -32,6 +42,22 @@ public class Student {
         this.lastName = lastName;
         this.email = email;
         this.age = age;
+    }
+
+    public StudentProfile getStudentProfile() {
+        return studentProfile;
+    }
+
+    public void setStudentProfile(StudentProfile studentProfile) {
+        this.studentProfile = studentProfile;
+    }
+
+    public School getSchool() {
+        return school;
+    }
+
+    public void setSchool(School school) {
+        this.school = school;
     }
 
     public Integer getId() {
