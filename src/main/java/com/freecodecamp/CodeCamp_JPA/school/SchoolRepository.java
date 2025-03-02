@@ -1,4 +1,4 @@
-package com.freecodecamp.CodeCamp_JPA;
+package com.freecodecamp.CodeCamp_JPA.school;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

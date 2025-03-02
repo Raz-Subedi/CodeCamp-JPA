@@ -1,5 +1,6 @@
-package com.freecodecamp.CodeCamp_JPA;
+package com.freecodecamp.CodeCamp_JPA.studentProfile;
 
+import com.freecodecamp.CodeCamp_JPA.student.Student;
 import jakarta.persistence.*;
 
 @Entity

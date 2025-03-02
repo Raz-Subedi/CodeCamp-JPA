@@ -1,6 +1,8 @@
-package com.freecodecamp.CodeCamp_JPA;
+package com.freecodecamp.CodeCamp_JPA.student;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.freecodecamp.CodeCamp_JPA.school.School;
+import com.freecodecamp.CodeCamp_JPA.studentProfile.StudentProfile;
 import jakarta.persistence.*;
 
 @Entity

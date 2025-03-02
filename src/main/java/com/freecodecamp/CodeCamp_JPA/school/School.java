@@ -1,6 +1,7 @@
-package com.freecodecamp.CodeCamp_JPA;
+package com.freecodecamp.CodeCamp_JPA.school;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.freecodecamp.CodeCamp_JPA.student.Student;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
