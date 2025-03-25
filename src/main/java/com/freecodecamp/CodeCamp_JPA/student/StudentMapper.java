@@ -8,7 +8,7 @@ public class StudentMapper {
 
     public Student toStudent(StudentDto dto){
         if(dto == null){
-            throw new NullPointerException("The student Dto should not be null");
+            throw new NullPointerException("d");
         }
         Student student = new Student();
         student.setFirstName(dto.firstname());

@@ -1,5 +1,6 @@
 package com.freecodecamp.CodeCamp_JPA.school;
 
+import com.freecodecamp.CodeCamp_JPA.exception.NameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,7 +17,10 @@ public class SchoolService {
         this.schoolMapper = schoolMapper;
     }
 
-    public SchoolDto create(SchoolDto dto) {
+    public SchoolDto create(SchoolDto dto){
+        if(dto.name().isEmpty()){
+            throw new NameNotFoundException("Name is Null");
+        }
         School school = schoolMapper.toSchool(dto);
         schoolRepository.save(school);
         return dto;

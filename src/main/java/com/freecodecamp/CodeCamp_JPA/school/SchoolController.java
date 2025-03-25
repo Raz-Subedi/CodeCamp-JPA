@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.naming.NameNotFoundException;
 import java.util.List;
 
 @RestController
@@ -18,7 +19,7 @@ public class SchoolController {
 
     @PostMapping("/schools")
     public SchoolDto create(
-            @RequestBody SchoolDto dto) {
+            @RequestBody SchoolDto dto){
         return schoolService.create(dto);
     }
 

@@ -14,6 +14,7 @@ public class School {
     @Id
     @GeneratedValue
     private Integer id;
+
     private String name;
 
     @OneToMany(
